@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X UA-Compatible" content="IE-Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/9c44561b53.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-------Header Section--------->
+    <div id="header">
+      <div class="container">
+        <nav>
+          <!--Add Logo Here-->
+          <img src=""/>
+          <ul id="side-menu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+        </nav>
+        <div class="header-text">
+          <p>Architect Student</p>
+          <h1>Welcome, I am <br /><span>Salmane</span> Yahya Ghadi</h1>
+        </div>
+      </div>
+      <!------About Section-------->
+      <div id="about">
+        <div class="container">
+          <div class="row">
+            <div class="about-col-1">
+              <!--Add image here-->
+              <img src="images/Photo salmane.jpg"/>
+            </div>
+            <div class="about-col-2">
+              <h1 class="about-title">About Me</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('Skills')">
+                  Skills
+                </p>
+                <p class="tab-links" onclick="opentab('Education')">
+                  Education
+                </p>
+              </div>
+              <div class="tab-contents active-tab" id="Skills">
+                <ul>
+                  <li>
+                    <span>Modelling Softwares</span><br />&#x2022; Revit
+                    <br />&#x2022; Rhino <br />&#x2022; Autodesk
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="Education">
+                <ul>
+                  <li>
+                    <span>2023 - 2027</span><br />&#x2022; BArch &#x2D;
+                    Université de Montréal
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!------------Portfolio Section--------------->
+      <div id="portfolio">
+        <div class="container">
+          <div class="sub-title">My Projects</div>
+          <div class="work-list">
+            <div class="work">
+              <img src="images/PavilionViews.jpg">
+              <div class="layer">
+                <h3>The Cube - 3D Developpement</h3>
+                <p>3D view of how the Cube gets deployed and pictures of some mappings</p>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+            <div class="work">
+              <img src="images/Povs.jpg">
+              <div class="layer">
+                <h3>The Cube - 1st Person POV</h3>
+                <p>This is a 1st person POV of how it would look on the deployed pavilion</p>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+            <div class="work">
+              <img src="images/IMG_1781.GIF">
+              <div class="layer">
+                <h3>The Cube - Pavilion Deployement Demonstration</h3>
+                <p>This is a simple animation that demonstrates how the Cube would transform and deploy as a appropriable pavilion.</p>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="btn">See More</a>
+        </div>
+      </div>
+      <!----------Contact Section-------------->
+      <div id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="contact-left">
+              <h1 class="sub-title">Contact Me</h1>
+              <p><i class="fas fa-solid fa-paper-plane"></i> salmaneghadi@gmail.com</p>
+              <p> <i class="fa-solid fa-phone"></i> +1 (514) 814-9402</p>
+              <div class="social-icons">
+                <a href="https://www.linkedin.com/in/salmane-yahya-ghadi/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/sssalmane/"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+              <!-------Add Salmane's CV Here------------>
+              <a href="" class="btn btn2">Download My CV</a>
+            </div>
+            <div class="contact-right">
+              <form onsubmit="sendForm(); reset(); return false;">
+                <input id="name" type="text" name="Name" placeholder="Your Name" required>
+                <input id="email" type="email" name="email" placeholder="Your Email" required>
+                <input id="subject" type="text" name="subject" placeholder="Subject" required>
+                <textarea id="message" name="message" rows="6" placeholder="Your Message"></textarea>
+                <button id="submit" type="submit" class="btn btn2">Submit</button>
+              </form>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
